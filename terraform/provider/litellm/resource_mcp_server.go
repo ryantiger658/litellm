@@ -58,10 +58,10 @@ func resourceLiteLLMMCPServer() *schema.Resource {
 				Default:  "none",
 				ValidateFunc: validation.StringInSlice([]string{
 					"none",
-					"bearer",
+					"bearer_token",
 					"basic",
 				}, false),
-				Description: "Authentication type (none, bearer, basic)",
+				Description: "Authentication type (none, bearer_token, basic)",
 			},
 			"mcp_access_groups": {
 				Type:        schema.TypeList,
